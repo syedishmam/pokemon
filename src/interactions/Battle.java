@@ -9,8 +9,10 @@ public class Battle {
 	}
 	
 	public void duel(Pokemon pokemonOne, Pokemon pokemonTwo) {
+		//While both pokemon have 1 HP or more, continue dueling
 		while(pokemonOne.getHP() > 0 && pokemonTwo.getHP() > 0) {
 			pokemonTwo.takeHit(pokemonOne.attack());
+			//If pokemonOne didn't kill pokemonTwo, then pokemonTwo will attack
 			if(pokemonTwo.getHP() > 0) pokemonOne.takeHit(pokemonTwo.attack());
 		}
 		if(pokemonOne.getHP() < 1) {
