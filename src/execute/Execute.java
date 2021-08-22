@@ -11,6 +11,8 @@ public class Execute {
 		Charmander charmander = new Charmander();
 		Bulbasaur bulbasaur = new Bulbasaur();
 		
+		Battle battle = new Battle(charmander, bulbasaur);
+		
 	}
 	
 }
