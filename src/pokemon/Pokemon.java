@@ -7,9 +7,11 @@ public abstract class Pokemon {
 	private int atkPts;
 	private int HP;
 	private int accPts;
+	protected int xpPts;
+	protected int prowess;
 	private String name;
 	
-	public Pokemon(int atkPts, int HP, int accPts, String name) {
+	public Pokemon(int atkPts, int HP, int accPts, int prowess, String name) {
 		//Assuming that all pokemon must have a minimum damage and minimum health of 1
 		if(atkPts < 1) this.atkPts = 1;
 		if(HP < 1) this.HP = 1;
@@ -17,6 +19,8 @@ public abstract class Pokemon {
 		this.atkPts = atkPts;
 		this.HP = HP;
 		this.accPts = accPts;
+		this.xpPts = 0;
+		this.prowess = prowess;
 		this.name = name;
 	}
 	
@@ -47,6 +51,22 @@ public abstract class Pokemon {
 	
 	public int getHP() {
 		return this.HP;
+	}
+	
+	public void setXP(int num) {
+		if(num > 0) this.xpPts = xpPts + num;
+	}
+	
+	public int getXP() {
+		return this.xpPts;
+	}
+	
+	public int getProwess() {
+		return this.prowess;
+	}
+	
+	public Pokemon evolve() {
+		return this;
 	}
 
 }
