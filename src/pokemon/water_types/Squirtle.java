@@ -9,7 +9,9 @@ public class Squirtle extends Pokemon {
 	}
 	
 	public Pokemon evolve() {
-		return new Wartortle();
+		Wartortle evolvedPokemon = new Wartortle();
+		System.out.println(this.getName() + " evolved into " + evolvedPokemon.getName());
+		return evolvedPokemon;
 	}
 	
 }

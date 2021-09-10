@@ -1,15 +1,15 @@
-package pokemon.grass_types;
+package pokemon.electric_types;
 
 import pokemon.Pokemon;
 
-public class Bulbasaur extends Pokemon {
+public class Pikachu extends Pokemon {
 
-	public Bulbasaur() {
-		super(49, 150, 45, 25, "Bulbasaur");
+	public Pikachu() {
+		super(50, 150, 45, 25, "Pikachu");
 	}
 	
 	public Pokemon evolve() {
-		Ivysaur evolvedPokemon = new Ivysaur();
+		Raichu evolvedPokemon = new Raichu();
 		System.out.println(this.getName() + " evolved into " + evolvedPokemon.getName());
 		return evolvedPokemon;
 	}

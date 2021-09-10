@@ -1,11 +1,11 @@
-package pokemon.fire_types;
+package pokemon.electric_types;
 
 import pokemon.Pokemon;
 
-public class Charmeleon extends Pokemon {
+public class Raichu extends Pokemon {
 
-	public Charmeleon() {
-		super(80, 175, 60, 20, "Charmeleon");
+	public Raichu() {
+		super(80, 175, 60, 20, "Raichu");
 	}
 	
 	public Pokemon evolve() {

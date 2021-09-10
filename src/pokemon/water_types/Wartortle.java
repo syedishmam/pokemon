@@ -9,6 +9,7 @@ public class Wartortle extends Pokemon {
 	}
 	
 	public Pokemon evolve() {
+		System.out.println("This Pokemon currently does not evolve");
 		return this;
 	}
 

@@ -1,34 +1,37 @@
 package execute;
 
 import pokemon.*;
+import pokemon.electric_types.Pikachu;
+
 import java.util.*;
 
 import interactions.Battle;
 import pokemon.fire_types.*;
 import pokemon.grass_types.Bulbasaur;
+import pokemon.water_types.Squirtle;
 
 public class Execute {
 
 	public static void main(String[] args) throws Exception {
 		
-		Charmander charmanderOne = new Charmander();
-		Bulbasaur bulbasaurOne = new Bulbasaur();
+		Charmander charmander = new Charmander();
+		Bulbasaur bulbasaur = new Bulbasaur();
 		
-		Charmander charmanderTwo = new Charmander();
-		Bulbasaur bulbasaurTwo = new Bulbasaur();
+		Squirtle squirtle = new Squirtle();
+		Pikachu pikachu = new Pikachu();
 		
 		List<Pokemon> teamOne = new ArrayList<Pokemon>();
 		List<Pokemon> teamTwo = new ArrayList<Pokemon>();
 		
-		teamOne.add(bulbasaurOne);
-		teamOne.add(charmanderOne);
+		teamOne.add(charmander);
+		teamOne.add(bulbasaur);
 		
-		teamTwo.add(bulbasaurTwo);
-		teamTwo.add(charmanderTwo);
+		teamTwo.add(squirtle);
+		teamTwo.add(pikachu);
 		
 		//Battle battle = new Battle(teamOne, teamTwo);
 		
-		Battle battle = new Battle(charmanderOne, charmanderTwo);
+		Battle battle = new Battle(teamOne, teamTwo);
 		
 	}
 	

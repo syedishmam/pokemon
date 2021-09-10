@@ -8,9 +8,9 @@ public class Charmander extends Pokemon{
 		super(52, 150, 40, 25, "Charmander");
 	}
 	
-	@Override
 	public Pokemon evolve() {
 		Charmeleon evolvedPokemon = new Charmeleon();
+		System.out.println(this.getName() + " evolved into " + evolvedPokemon.getName());
 		return evolvedPokemon;
 	}
 	

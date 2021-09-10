@@ -6,12 +6,11 @@ import pokemon.*;
 
 public class Battle {
 
-	public Battle(Pokemon pokemonOne, Pokemon pokemonTwo) throws Exception {
-		//Pokemon winner = duel(pokemonOne, pokemonTwo);
-		testEvolve(pokemonOne);
+	public Battle(Pokemon pokemonOne, Pokemon pokemonTwo) {
+		Pokemon winner = duel(pokemonOne, pokemonTwo);
 	}
 	
-	public Battle(List<Pokemon> teamOne, List<Pokemon> teamTwo) throws Exception {
+	public Battle(List<Pokemon> teamOne, List<Pokemon> teamTwo) {
 		Pokemon battleOneWinner = duel(teamOne.get(0), teamTwo.get(0));
 		Pokemon battleTwoWinner = duel(teamOne.get(1), teamTwo.get(1));
 		
@@ -27,7 +26,7 @@ public class Battle {
 		}
 	}
 	
-	public Pokemon duel(Pokemon pokemonOne, Pokemon pokemonTwo) throws Exception {
+	public Pokemon duel(Pokemon pokemonOne, Pokemon pokemonTwo) {
 		
 		/*
 		 * Battling logic
