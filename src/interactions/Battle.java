@@ -6,11 +6,12 @@ import pokemon.*;
 
 public class Battle {
 
-	public Battle(Pokemon pokemonOne, Pokemon pokemonTwo) {
-		Pokemon winner = duel(pokemonOne, pokemonTwo);
+	public Battle(Pokemon pokemonOne, Pokemon pokemonTwo) throws Exception {
+		//Pokemon winner = duel(pokemonOne, pokemonTwo);
+		testEvolve(pokemonOne);
 	}
 	
-	public Battle(List<Pokemon> teamOne, List<Pokemon> teamTwo) {
+	public Battle(List<Pokemon> teamOne, List<Pokemon> teamTwo) throws Exception {
 		Pokemon battleOneWinner = duel(teamOne.get(0), teamTwo.get(0));
 		Pokemon battleTwoWinner = duel(teamOne.get(1), teamTwo.get(1));
 		
@@ -26,7 +27,7 @@ public class Battle {
 		}
 	}
 	
-	public Pokemon duel(Pokemon pokemonOne, Pokemon pokemonTwo) {
+	public Pokemon duel(Pokemon pokemonOne, Pokemon pokemonTwo) throws Exception {
 		
 		/*
 		 * Battling logic
@@ -35,9 +36,7 @@ public class Battle {
 		
 		while(pokemonOne.getHP() > 0 && pokemonTwo.getHP() > 0) {
 			
-			pokemonTwo.takeHit(pokemonOne.attack());
-			if(pokemonOne.getXP() >= 25) pokemonOne = pokemonOne.evolve();
-			
+			pokemonTwo.takeHit(pokemonOne.attack());		
 			if(pokemonTwo.getHP() > 0) pokemonOne.takeHit(pokemonTwo.attack());
 			
 		}
@@ -61,4 +60,24 @@ public class Battle {
 		}
 	}
 	
+	public void testEvolve(Pokemon pokemon) throws Exception {
+		pokemon.setXP(10);
+		System.out.println(pokemon.getXP());
+		pokemon = pokemon.evolve();
+		System.out.println(pokemon.getXP());
+	}
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

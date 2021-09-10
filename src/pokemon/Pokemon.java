@@ -2,12 +2,12 @@ package pokemon;
 
 import java.lang.Math;
 
-public abstract class Pokemon {
+public abstract class Pokemon implements Evolve {
 	
 	private int atkPts;
-	private int HP;
 	private int accPts;
 	protected int xpPts;
+	private int HP;
 	protected int prowess;
 	private String name;
 	
@@ -45,12 +45,16 @@ public abstract class Pokemon {
 		}
 	}
 	
+	public int getHP() {
+		return this.HP;
+	}
+	
 	public String getName() {
 		return this.name;
 	}
 	
-	public int getHP() {
-		return this.HP;
+	public int getProwess() {
+		return this.prowess;
 	}
 	
 	public void setXP(int num) {
@@ -59,14 +63,6 @@ public abstract class Pokemon {
 	
 	public int getXP() {
 		return this.xpPts;
-	}
-	
-	public int getProwess() {
-		return this.prowess;
-	}
-	
-	public Pokemon evolve() {
-		return this;
 	}
 
 }
